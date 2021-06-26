@@ -1,8 +1,8 @@
 <template>
-  <div
-    class="w-screen h-screen grid content-center items-center border-red-400 border-8"
-  >
-    <div class="max-w-screen-sm mx-auto border-4 border-gray-300 border-double">
+  <div class="container w-screen grid mx-auto">
+    <div
+      class="mt-10 mx-auto border-4 border-gray-300 border-double rounded-2xl shadow-xl"
+    >
       <h1 class="text-purple-700 text-6xl text-center p-5">Hello Kittens!</h1>
       <p class="mt-6 mb-4 p-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim hic qui
