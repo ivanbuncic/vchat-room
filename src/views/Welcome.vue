@@ -50,7 +50,7 @@ export default {
     const router = useRouter();
 
     const showChatroom = () => {
-      router.push({ name: Chatroom });
+      router.push({ name: 'Chatroom' });
     };
 
     return { showLogin, showChatroom };
