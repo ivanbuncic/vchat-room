@@ -46,6 +46,7 @@
       Sign up
     </button>
     <p
+      v-if="error"
       class="mt-5 p-3 border-red-600 border rounded-md text-red-500 text-sm text-center max-w-max mx-auto"
     >
       {{ error }}

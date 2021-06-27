@@ -31,24 +31,35 @@
     >
       Login
     </button>
+    <p
+      v-if="error"
+      class="mt-5 p-3 border-red-600 border rounded-md text-red-500 text-sm text-center max-w-max mx-auto"
+    >
+      {{ error }}
+    </p>
   </form>
 </template>
 
 <script>
 import { ref } from 'vue';
+import useLogin from '../composables/useLogin';
 
 export default {
   setup() {
+    const { error, login } = useLogin();
     // refs
 
     const email = ref('');
     const password = ref('');
 
-    const handleSubmit = () => {
-      console.log(email.value, password.value);
+    const handleSubmit = async () => {
+      await login(email.value, password.value);
+      if (!error.value) {
+        console.log(error.message);
+      }
     };
 
-    return { email, password, handleSubmit };
+    return { email, password, handleSubmit, error };
   },
 };
 </script>
