@@ -1,4 +1,5 @@
 <template>
+  <Navbar />
   <div class="container w-screen grid mx-auto">
     <div
       class="mt-10 mx-auto border-4 border-gray-400 border-double rounded-2xl shadow-xl w-5/12"
@@ -19,7 +20,10 @@
 </template>
 
 <script>
-export default {};
+import Navbar from '../components/Navbar.vue';
+export default {
+  components: { Navbar },
+};
 </script>
 
 <style></style>
