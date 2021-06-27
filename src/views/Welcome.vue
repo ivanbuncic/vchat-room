@@ -17,7 +17,7 @@
           >
         </p>
 
-        <LoginForm />
+        <LoginForm @login="showChatroom" />
       </div>
       <div v-else class="mt-3 p-5">
         <p class="p-2 text-center mb-10 text-xl">
@@ -31,7 +31,7 @@
             >Login then!</span
           >
         </p>
-        <SignupForm />
+        <SignupForm @signup="showChatroom" />
       </div>
     </div>
   </div>
@@ -41,13 +41,19 @@
 import SignupForm from '../components/SignupForm.vue';
 import LoginForm from '../components/LoginForm.vue';
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default {
   components: { SignupForm, LoginForm },
   setup() {
     const showLogin = ref(true);
+    const router = useRouter();
 
-    return { showLogin };
+    const showChatroom = () => {
+      router.push({ name: Chatroom });
+    };
+
+    return { showLogin, showChatroom };
   },
 };
 </script>
