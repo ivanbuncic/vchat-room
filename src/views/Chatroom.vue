@@ -6,7 +6,7 @@
       <h1 class="text-purple-700 text-3xl text-center p-5">
         Welcome to the Chatroom!
       </h1>
-      <div v-if="showChatroom" class="mt-3 p-5">
+      <div class="mt-3 p-5">
         <p class="p-2 text-center mb-10 text-xl">
           I would be happy if you start chating...
         </p>
