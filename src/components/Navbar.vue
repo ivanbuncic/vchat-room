@@ -127,6 +127,8 @@
 <script>
 import { ref } from 'vue';
 import useLogout from '../composables/useLogout';
+import getUser from '../composables/getUser';
+
 import {
   Disclosure,
   DisclosureButton,
@@ -153,6 +155,8 @@ export default {
   },
   setup() {
     const { logout, error } = useLogout();
+    const { user } = getUser();
+
     const handleClick = async () => {
       await logout();
       if (!error.value) {
