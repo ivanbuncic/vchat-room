@@ -1,7 +1,7 @@
 <template>
   <div class="container w-screen grid mx-auto">
     <div
-      class="mt-10 mx-auto border-4 border-gray-400 border-double rounded-2xl shadow-xl w-5/12"
+      class="mt-10 mx-auto border-4 border-gray-400 border-double rounded-2xl shadow-xl md:w-5/12 w-96"
     >
       <h1 class="text-purple-700 text-3xl text-center p-5">Hello Kittens!</h1>
       <div v-if="showLogin" class="mt-3 p-5">

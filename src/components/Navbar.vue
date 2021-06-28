@@ -92,16 +92,11 @@
       <div class="pt-4 pb-3 border-t border-gray-200">
         <div class="flex items-center px-4">
           <div class="flex-shrink-0">
-            <img
-              class="h-10 w-10 rounded-full"
-              src="{user.profilePhotoURL}"
-              alt=""
-            />
+            <span class="text-green-600 font-semibold underline">{{
+              user.displayName
+            }}</span>
           </div>
-          <div class="ml-3">
-            <div class="text-base font-medium text-gray-800">Tom Cook</div>
-            <div class="text-sm font-medium text-gray-500">tom@example.com</div>
-          </div>
+
           <button
             class="ml-auto flex-shrink-0 bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >

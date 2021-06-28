@@ -2,7 +2,7 @@
   <Navbar />
   <div class="container w-screen grid mx-auto">
     <div
-      class="mt-10 mx-auto border-4 border-gray-400 border-double rounded-2xl shadow-xl w-5/12"
+      class="mt-10 mx-auto border-4 border-gray-400 border-double rounded-2xl shadow-xl md:w-5/12 w-96"
     >
       <h1 class="text-purple-700 text-3xl text-center p-5">
         Welcome to the Chatroom, {{ user.displayName }}!
@@ -11,9 +11,8 @@
         <p class="p-2 text-center mb-10 text-xl">
           I would be happy if you start chating...
         </p>
-        <p class="p-2 text-center mb-10 text-lg">
-          Some random chat here...
-        </p>
+        <ChatWindow />
+        <NewChatForm />
       </div>
     </div>
   </div>
@@ -21,6 +20,8 @@
 
 <script>
 import Navbar from '../components/Navbar.vue';
+import NewChatForm from '../components/NewChatForm.vue';
+import ChatWindow from '../components/ChatWindow.vue';
 import getUser from '../composables/getUser';
 import { watch } from 'vue';
 import { useRouter } from 'vue-router';
@@ -38,7 +39,7 @@ export default {
 
     return { user };
   },
-  components: { Navbar },
+  components: { Navbar, NewChatForm, ChatWindow },
 };
 </script>
 
