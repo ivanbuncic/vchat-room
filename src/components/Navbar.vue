@@ -139,7 +139,7 @@ export default {
     const handleClick = async () => {
       await logout();
       if (!error.value) {
-        console.log('User logged out!');
+        return;
       }
     };
     const open = ref(false);
