@@ -12,7 +12,7 @@
         </p>
         <p class="p-2 text-center mb-10 text-lg">
           You don't have an account?
-          <span
+          <br /><span
             class="cursor-pointer font-semibold underline"
             @click="showLogin = false"
             >Signup then!</span
@@ -27,7 +27,7 @@
         </p>
         <p class="p-2 text-center mb-10 text-lg">
           Already have an account?
-          <span
+          <br /><span
             class="cursor-pointer font-semibold underline"
             @click="showLogin = true"
             >Login then!</span
