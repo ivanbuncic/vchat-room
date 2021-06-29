@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { ref, watchEffect } from 'vue';
 import { projectFirestore } from '../firebase/config';
 
 const getCollection = collection => {
@@ -24,6 +24,12 @@ const getCollection = collection => {
       error.value = 'Could not fetch any data 💀';
     }
   );
+
+  watchEffect(onInvalidate => {
+    // unsub frpm prev collection not to create gazzilions of snapshots
+    onInvalidate(() => unsub());
+  });
+
   return { documents, error };
 };
 

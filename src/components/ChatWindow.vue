@@ -1,15 +1,16 @@
 <template>
-  <div
-    v-if="formattedDocuments"
-    class="w-full h-full bg-red-50 rounded-lg mb-3 shadow-lg"
-  >
+  <div>
     <p
       v-if="error"
       class="mt-5 p-3 border-red-600 border rounded-md text-red-500 text-sm text-center max-w-max mx-auto"
     >
       {{ error }}
     </p>
-    <div class="p-3" v-if="formattedDocuments">
+    <div
+      ref="messages"
+      class="p-3 w-full bg-red-50 rounded-lg mb-3 shadow-lg overflow-y-scroll max-h-96"
+      v-if="formattedDocuments"
+    >
       <div
         class="rounded-lg mb-5 border border-gray-400 p-3"
         v-for="doc in formattedDocuments"
@@ -26,7 +27,7 @@
 
 <script>
 import getCollection from '../composables/getCollection';
-import { computed } from 'vue';
+import { computed, ref, onUpdated } from 'vue';
 import { formatDistanceToNow } from 'date-fns';
 
 export default {
@@ -41,7 +42,14 @@ export default {
       }
     });
 
-    return { error, documents, formattedDocuments };
+    // Auto scroll because who doesn't hate when new messages are invisible
+    const messages = ref(null);
+
+    onUpdated(() => {
+      messages.value.scrollTop = messages.value.scrollHeight;
+    });
+
+    return { error, documents, formattedDocuments, messages };
   },
 };
 </script>
