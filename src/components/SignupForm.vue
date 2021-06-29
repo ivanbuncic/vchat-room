@@ -43,7 +43,7 @@
     <button
       class="mx-auto mt-3 inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
     >
-      Sign up
+      Signup
     </button>
     <p
       v-if="error"
