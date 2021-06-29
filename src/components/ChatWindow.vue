@@ -8,7 +8,7 @@
     </p>
     <div
       ref="messages"
-      class="p-3 w-full bg-red-50 rounded-lg mb-3 shadow-lg overflow-y-scroll max-h-96"
+      class="p-3 w-full bg-pink-50 rounded-lg mb-3 shadow-lg overflow-y-scroll max-h-96"
       v-if="formattedDocuments"
     >
       <div
@@ -16,8 +16,7 @@
         v-for="doc in formattedDocuments"
         :key="doc.id"
       >
-        <span class="p-1 text-xs">{{ doc.createdAt }}</span
-        ><br />
+        <span class="p-1 text-xs">{{ doc.createdAt }} ago</span><br />
         <span class="p-1 font-semibold text-lg">{{ doc.name }} :</span>
         <span class="p-1 font-thin text-xl">{{ doc.message }}</span>
       </div>

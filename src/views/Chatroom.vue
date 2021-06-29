@@ -4,8 +4,8 @@
     <div
       class="mt-10 mx-auto border-4 border-gray-400 border-double rounded-2xl shadow-xl md:w-5/12 w-96"
     >
-      <h1 class="text-purple-700 text-3xl text-center p-5">
-        Welcome to the Chatroom, {{ user.displayName }}!
+      <h1 class="text-pink-600 text-3xl text-center p-5 font-semibold">
+        Welcome to the Chatroom
       </h1>
       <div class="mt-3 p-5">
         <p class="p-2 text-center mb-10 text-xl">

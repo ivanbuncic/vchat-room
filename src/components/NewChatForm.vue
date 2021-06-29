@@ -2,7 +2,7 @@
   <div class="mx-auto w-full h-full container">
     <form>
       <textarea
-        class="w-full max-w-full mb-2 p-3 box-border border-0 rounded-xl font-extralight bg-gray-100 text-green-800 text-2xl h-96"
+        class="w-full max-w-full mb-2 p-3 box-border border-0 rounded-xl font-extralight bg-gray-100 text-pink-700 text-2xl h-96"
         placeholder="Type a message and hit enter"
         v-model="message"
         @keypress.enter.prevent="handleSubmit"

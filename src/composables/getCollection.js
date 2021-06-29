@@ -9,7 +9,7 @@ const getCollection = collection => {
     .collection(collection)
     .orderBy('createdAt');
 
-  collectionRef.onSnapshot(
+  const unsub = collectionRef.onSnapshot(
     snap => {
       let results = [];
       snap.docs.forEach(doc => {
